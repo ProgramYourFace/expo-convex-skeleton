@@ -89,7 +89,9 @@ export function WorkOSAuthProvider({
             return session.access_token;
           } catch (e) {
             console.log('Failed to refresh session', e);
-            setUser(null);
+            // Stay signed in through transient failures (offline, 5xx); only drop
+            // the user once the refresh token was rejected and cleared.
+            if (!(await workos.getRefreshToken())) setUser(null);
             return null;
           }
         }

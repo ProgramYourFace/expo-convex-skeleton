@@ -182,8 +182,9 @@ export class WorkOSClient {
     const data: Session = await response.json();
 
     if (!response.ok) {
-      // If the refresh fails (e.g. token expired), we should clear the session locally
-      await this.clearLocalSession();
+      // Only an explicit rejection (expired/revoked refresh token) ends the session;
+      // transient server errors shouldn't sign the user out.
+      if (response.status >= 400 && response.status < 500) await this.clearLocalSession();
       throw new Error(data.error_description || 'Failed to refresh session');
     }
 

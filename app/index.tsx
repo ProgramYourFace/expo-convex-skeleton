@@ -13,7 +13,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView className="flex-1 bg-background">
       <View className="flex-1 items-center justify-center gap-6 px-6">
-        <Text variant="h1">Joe&apos;z Construction</Text>
+        <Text variant="h1">Expo Convex Skeleton</Text>
         {isAuthenticated ? (
           <>
             <Text variant="muted">
@@ -26,7 +26,7 @@ export default function HomeScreen() {
           </>
         ) : (
           <>
-            <Text variant="muted">Manage your jobs from anywhere.</Text>
+            <Text variant="muted">Expo + Convex + WorkOS starter.</Text>
             <Button onPress={signIn}>
               <Text>Sign in</Text>
             </Button>

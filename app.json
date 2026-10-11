@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "Joez Construction",
-    "slug": "joez-construction",
+    "name": "Expo Convex Skeleton",
+    "slug": "expo-convex-skeleton",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "joezconstruction",
+    "scheme": "expoconvexskeleton",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon",
       "supportsTablet": true,
-      "bundleIdentifier": "com.csilvas.joezconstruction"
+      "bundleIdentifier": "com.csilvas.expoconvexskeleton"
     },
     "android": {
       "adaptiveIcon": {
@@ -20,7 +20,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.csilvas.joezconstruction"
+      "package": "com.csilvas.expoconvexskeleton"
     },
     "web": {
       "output": "static",
